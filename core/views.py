@@ -2,9 +2,17 @@ from django.shortcuts import render
 
 from django.views.generic import TemplateView
 
+from .forms import ContatoForms
+
 
 def contato(request):
-    return render(request, 'contato.html')
+    form = ContatoForms()
+
+    context = {
+        'form': form
+    }
+
+    return render(request, 'contato.html', context)
 
 
 class HomeView(TemplateView):
