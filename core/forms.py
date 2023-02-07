@@ -1,4 +1,5 @@
 from django import forms
+from django.core.mail import EmailMessage
 
 
 class ContatoForms(forms.Form):
